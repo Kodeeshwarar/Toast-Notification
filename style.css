@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+}
+html {
+  font-size: 62.56%;
+}
+:root {
+  --background-color: #495c83;
+  --primary-color: #ffff;
+  --secondary-color: #7a86b6;
+  --header-height: 20vh;
+  --main-page-height: 30vh;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+  line-height: 1.7;
+}
+
+.bd-grid {
+  display: grid;
+  place-items: center;
+}
+.header {
+  height: var(--header-height);
+  background-color: var(--secondary-color);
+}
+.Primary-heading {
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.main {
+  height: var(--main-page-height);
+}
+.btn-notification {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--primary-color);
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 0;
+  outline: none;
+}
+
+.btn-notification:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
+}
+.btn-notification:active {
+  transform: scale(0.94) translateY(0);
+  transform-origin: center;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+}
+.toast-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.toast {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+  padding: 0.7rem 1.4rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+}
